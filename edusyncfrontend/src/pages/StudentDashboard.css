@@ -1,0 +1,79 @@
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;   /* soft light grey */
+  color: #2c3e50;              /* dark slate blue */
+}
+
+/* Top Navigation Bar */
+.navbar {
+  background-color: #1a237e;   /* deep navy */
+  color: #fbc02d;              /* golden yellow */
+  padding: 1.2rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dashboard Container */
+.student-dashboard {
+  padding: 3rem 4rem;
+  background-color: #ffffff;  /* white content background */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(26, 35, 126, 0.1); /* subtle navy shadow */
+}
+
+/* Page Header */
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  color: #1a237e;   /* deep navy */
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.05rem;
+  color: #7f8c8d;   /* medium grey */
+  font-weight: 400;
+}
+
+/* Grid for Cards */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fefefe;  /* near white */
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 3px 16px rgba(26, 35, 126, 0.07);
+  border-left: 6px solid #fbc02d; /* golden yellow accent */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(26, 35, 126, 0.2);
+  cursor: pointer;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  color: #1a237e;  /* deep navy */
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #636e72;  /* dark grey */
+  line-height: 1.4;
+}
