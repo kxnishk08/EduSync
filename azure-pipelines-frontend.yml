@@ -1,0 +1,25 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    cd edusyncfrontend
+    npm install
+    npm run build
+  displayName: 'Build React App'
+
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: 'edusyncfrontend'         # Folder containing your app (React source code)
+    output_location: 'build'                # Output folder after build (React)
+    azure_static_web_apps_api_token: $(deployment_token)
+  env:
+    deployment_token: $(deployment_token)   # Explicitly pass the secret as env variable
